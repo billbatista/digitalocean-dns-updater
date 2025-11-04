@@ -73,13 +73,13 @@ func main() {
 	newIP, err := ipgrabber.GetPublicIP()
 	if err != nil {
 		slog.ErrorContext(ctx, "Error getting public IP", slog.Any("err", err))
-		return
+		os.Exit(1)
 	}
 
 	err = updateDNSRecord(ctx, client, *domain, *recordName, *recordType, newIP)
 	if err != nil {
 		slog.ErrorContext(ctx, "Error updating DNS record", "recordName", *recordName, slog.Any("err", err))
-		return
+		os.Exit(1)
 	}
 
 	slog.InfoContext(
