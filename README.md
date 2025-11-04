@@ -153,11 +153,6 @@ crontab -e
 - Ensure the token has read and write permissions
 - Check that there are no extra spaces or characters in the token
 
-## Dependencies
-
-- [github.com/digitalocean/godo](https://github.com/digitalocean/godo) - Official DigitalOcean Go client library
-- [golang.org/x/oauth2](https://golang.org/x/oauth2) - OAuth2 authentication
-
 ## License
 
 This project is provided as-is for educational and personal use.
